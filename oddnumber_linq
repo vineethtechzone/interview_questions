@@ -1,0 +1,13 @@
+// Calculate Oddnumber Linq
+// Assume we want to travel 25 destinations,but only able to travel odd number destinations. each destination expense is 25 Rs.
+// Caluculate the total expence for the travel with out using any loop.
+
+int totalDestinations = 25;
+List<int> oddNumbers = Enumerable.Range(1, totalDestinations)
+                                 .Where(x => x % 2 == 0)
+                                 .ToList();
+int expence = oddNumbers.Count * 25;
+
+// Print the list
+Console.WriteLine("Total Expense " + expence + ":");
+oddNumbers.ForEach(num => Console.Write(num + " "));
